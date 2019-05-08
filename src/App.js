@@ -1,11 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Sidebar from "./components/Sidebar";
+import SidebarToggle from "./components/SidebarToggle";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div
+      style={{
+        minHeight: "100%"
+      }}
+    >
+      <div style={{ float: "left" }}>
+        <Sidebar />
+      </div>
+      <SidebarToggle />
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -18,7 +27,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }
