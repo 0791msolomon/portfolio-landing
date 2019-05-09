@@ -1,38 +1,30 @@
 import React from "react";
 import "../index.css";
+import { Link } from "react-router-dom";
+
 const Sidebar = props => {
   return (
-    <div class="wrapper">
-      <nav id="sidebar" style={{ height: "100%" }}>
+    <div
+      class="wrapper"
+      style={{ minHeight: "100%", margin: "0%", padding: "0%" }}
+    >
+      <nav id="sidebar" style={{ minHeight: "100%" }}>
         <div class="sidebar-header">
-          <h3>Bootstrap Sidebar</h3>
+          <h3 style={{ fontFamily: "open sans, roboto" }}>Matthew Solomon</h3>
+          <hr
+            style={{
+              fontWeight: "bold",
+              color: "white",
+              backgroundColor: "white"
+            }}
+          />
         </div>
 
         <ul class="list-unstyled components">
-          <p>Dummy Heading</p>
+          <p>{"Info & Links"}</p>
+
           <li>
-            <a
-              href="#homeSubmenu"
-              data-toggle="collapse"
-              aria-expanded="false"
-              class="dropdown-toggle"
-            >
-              Home
-            </a>
-            <ul class="collapse list-unstyled" id="homeSubmenu">
-              <li>
-                <a href="#">Home 1</a>
-              </li>
-              <li>
-                <a href="#">Home 2</a>
-              </li>
-              <li>
-                <a href="#">Home 3</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">About</a>
+            <Link to="/">About</Link>
           </li>
           <li>
             <a
@@ -41,25 +33,39 @@ const Sidebar = props => {
               aria-expanded="false"
               class="dropdown-toggle"
             >
-              Pages
+              Small Projects
             </a>
             <ul class="collapse list-unstyled" id="pageSubmenu">
               <li>
-                <a href="#">Page 1</a>
+                <a
+                  href="http://matthew-s-weather.herokuapp.com"
+                  target="_blank"
+                >
+                  Weather
+                </a>
               </li>
               <li>
-                <a href="#">Page 2</a>
+                <a
+                  href="http://matthew-s-higherLower.herokuapp.com"
+                  target="_blank"
+                >
+                  HigherLower
+                </a>
               </li>
-              <li>
-                <a href="#">Page 3</a>
+              <li
+                data-toggle="tooltip"
+                data-placement="bottom"
+                title="Under Construction"
+              >
+                <a>Voting</a>
               </li>
             </ul>
           </li>
           <li>
-            <a href="#">Portfolio</a>
+            <Link to="/demo">Demo Action</Link>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
       </nav>

@@ -2,15 +2,7 @@ import React from "react";
 import "../index.css";
 const SidebarToggle = props => {
   return (
-    <div
-      id="content"
-      style={{
-        backgroundColor: "black",
-        color: "black",
-        padding: "0",
-        margin: "0"
-      }}
-    >
+    <div id="content">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <button type="button" id="sidebarCollapse" class="btn btn-info">

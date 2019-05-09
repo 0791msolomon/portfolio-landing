@@ -1,33 +1,47 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import { BrowserRouter as Router } from "react-router-dom";
+import Routes from "./components/Routes";
 import Sidebar from "./components/Sidebar";
 import SidebarToggle from "./components/SidebarToggle";
+import Footer from "./components/Footer";
 function App() {
   return (
     <div
       style={{
-        minHeight: "100%"
+        minHeight: "100%",
+        display: "flex",
+        flexDirection: "row",
+        margin: "0%",
+        padding: "0%"
       }}
     >
-      <div style={{ float: "left" }}>
+      <Router>
         <Sidebar />
-      </div>
-      <SidebarToggle />
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        <div
+          style={{
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            padding: "0",
+            margin: "0"
+          }}
         >
-          Learn React
-        </a>
-      </header> */}
+          <SidebarToggle />
+          <div
+            className="content"
+            style={{
+              alignSelf: "center",
+              paddingTop: "5%",
+              paddingBottom: "5%",
+              width: "100%"
+            }}
+          >
+            <Routes />
+          </div>
+          <Footer />
+        </div>
+      </Router>
     </div>
   );
 }
