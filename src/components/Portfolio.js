@@ -22,76 +22,46 @@ class Portfolio extends React.Component {
   };
   render() {
     return (
-      <div>
-        <div>Demos</div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column"
+        }}
+      >
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+            <h4 style={{ fontFamily: "open sans, roboto" }}>Github Repos</h4>
+            <p class="lead">
+              <small>
+                This is a modified jumbotron that occupies the entire horizontal
+                space of its parent.
+              </small>
+            </p>
+          </div>
+        </div>
         <div
-          className="container"
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            flexDirection: "column"
-          }}
+          className="col-12"
+          style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}
         >
           <div
-            id="carouselExampleIndicators"
-            class="carousel slide container"
-            data-ride="carousel"
-            data-interval="false"
+            className="img-responsive col-lg-4 col-sm-12"
+            style={{ marginTop: "2%" }}
           >
-            <ol class="carousel-indicators">
-              <li
-                data-target="#carouselExampleIndicators"
-                data-slide-to="0"
-                class="active"
-              />
-              <li data-target="#carouselExampleIndicators" data-slide-to="1" />
-              <li data-target="#carouselExampleIndicators" data-slide-to="2" />
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img
-                  class="d-block w-100 img-responsive"
-                  src={weather}
-                  alt="First slide"
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  class="d-block w-100 img-responsive"
-                  src={higherlower}
-                  alt="Second slide"
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  class="d-block w-100 img-responsive"
-                  src="https://i.ytimg.com/vi/xDhzYQ4VyCw/maxresdefault.jpg"
-                  alt="Third slide"
-                />
-              </div>
-            </div>
-            <a
-              class="carousel-control-prev"
-              href="#carouselExampleIndicators"
-              role="button"
-              data-slide="prev"
-            >
-              <span class="carousel-control-prev-icon" aria-hidden="true" />
-              <span class="sr-only">Previous</span>
-            </a>
-            <a
-              class="carousel-control-next"
-              href="#carouselExampleIndicators"
-              role="button"
-              data-slide="next"
-            >
-              <span class="carousel-control-next-icon" aria-hidden="true" />
-              <span class="sr-only">Next</span>
-            </a>
-          </div>{" "}
-        </div>
-        <div style={{ textAlign: "center" }} className="display-2">
-          what up
+            <img src={weather} className="d-block w-100 img-responsive  " />
+          </div>
+          <div
+            className="img-responsive col-lg-4 col-sm-12"
+            style={{ marginTop: "2%" }}
+          >
+            <img src={weather} className="d-block w-100 img-responsive  " />
+          </div>
+          <div
+            className="img-responsive col-lg-4 col-sm-12"
+            style={{ marginTop: "2%" }}
+          >
+            <img src={weather} className="d-block w-100 img-responsive  " />
+          </div>
         </div>
       </div>
     );

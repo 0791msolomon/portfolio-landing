@@ -352,12 +352,14 @@ class About extends React.Component {
               className="fa fa-chevron-down	"
             />
             <br />
-            <p style={{ alignSelf: "center", color: "#17a2b8" }}>Seqqure</p>
-            <p style={{ alignSelf: "center", color: "#17a2b8" }}>
-              Full Stack Dev
+            <p style={{ alignSelf: "center", color: "#7386D5" }}>
+              <small>USMC</small>
             </p>
             <p style={{ alignSelf: "center", color: "#17a2b8" }}>
-              Jan 2018-Sep 2018
+              <small>Recon Marine</small>
+            </p>
+            <p style={{ alignSelf: "center", color: "#17a2b8" }}>
+              <small>Jun 2010-June 2015</small>
             </p>
             <i
               style={{ alignSelf: "center", color: "grey", fontWeight: "bold" }}
@@ -367,11 +369,36 @@ class About extends React.Component {
               style={{ alignSelf: "center", color: "grey", fontWeight: "bold" }}
               className="fa fa-chevron-down	"
             />
-            <br />
-            <p style={{ alignSelf: "center", color: "#17a2b8" }}>RTR</p>
-            <p style={{ alignSelf: "center", color: "#17a2b8" }}>React Dev</p>
+            <p style={{ alignSelf: "center", color: "#7386D5" }}>
+              <small>Seqqure</small>
+            </p>
             <p style={{ alignSelf: "center", color: "#17a2b8" }}>
-              Sep 2018-Present
+              <small>Full Stack Dev</small>
+            </p>
+            <p style={{ alignSelf: "center", color: "#17a2b8" }}>
+              <small>Jan 2018-Sep 2018</small>
+            </p>
+            <i
+              style={{ alignSelf: "center", color: "grey", fontWeight: "bold" }}
+              className="fa fa-chevron-down	"
+            />
+            <i
+              style={{ alignSelf: "center", color: "grey", fontWeight: "bold" }}
+              className="fa fa-chevron-down	"
+            />{" "}
+            <i
+              style={{ alignSelf: "center", color: "grey", fontWeight: "bold" }}
+              className="fa fa-chevron-down	"
+            />
+            <br />
+            <p style={{ alignSelf: "center", color: "#7386D5" }}>
+              <small>RTR</small>
+            </p>
+            <p style={{ alignSelf: "center", color: "#17a2b8" }}>
+              <small>React Dev</small>
+            </p>
+            <p style={{ alignSelf: "center", color: "#17a2b8" }}>
+              <small>Sep 2018-Present</small>
             </p>
           </div>
         </div>
