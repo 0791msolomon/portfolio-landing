@@ -1,7 +1,7 @@
 import axios from "axios";
 require("dotenv").config();
 
-let baseUrl = process.env.REACT_APP_BASE_URL || "";
+let baseUrl = process.env.REACT_APP_BASE_URL || "http://localhost:5000";
 baseUrl += "/api";
 
 export const contactData = async (name, company, email) => {
