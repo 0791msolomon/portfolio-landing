@@ -52,6 +52,11 @@ const Sidebar = props => {
                   HigherLower
                 </a>
               </li>
+              <li>
+                <a href="http://matthew-s-menu.herokuapp.com" target="_blank">
+                  Restaurant Menu
+                </a>
+              </li>
               <li
                 data-toggle="tooltip"
                 data-placement="bottom"
