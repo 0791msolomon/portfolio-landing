@@ -3,6 +3,12 @@ import axios from "axios";
 import weather from "./photos/weather.png";
 import menu from "./photos/menu.png";
 import higherlower from "./photos/higherlower.png";
+import rtr from "./photos/rtr.png";
+import rtr2 from "./photos/rtr2.png";
+import rtr3 from "./photos/rtr3.png";
+import seqqure from "./photos/seqqure.png";
+import seqqure2 from "./photos/seqqure2.png";
+
 import moment from "moment";
 import "../index.css";
 class Portfolio extends React.Component {
@@ -110,11 +116,14 @@ class Portfolio extends React.Component {
           flexDirection: "column"
         }}
       >
-        <div className="jumbotron jumbotron-fluid">
+        <div
+          className="jumbotron jumbotron-fluid"
+          style={{ backgroundColor: "#7386d5", color: "white" }}
+        >
           <div className="container">
             <h4 style={{ fontFamily: "open sans, roboto" }}>Github Repos</h4>
             <p className="lead">
-              <small>
+              <small style={{ color: "white" }}>
                 This is here to display the activity on some of the projects
                 that I've got linked in the "small projects" tab queried from
                 the github API as well as a quick description for the project,
@@ -252,6 +261,82 @@ class Portfolio extends React.Component {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div
+          className="jumbotron jumbotron-fluid"
+          style={{
+            marginTop: "3%",
+            backgroundColor: "#7386d5",
+            color: "white"
+          }}
+        >
+          <div className="container">
+            <h4
+              style={{ fontFamily: "open sans, roboto", textAlign: "center" }}
+            >
+              Some images of interfaces i've done for seqqure/RTR
+            </h4>
+          </div>
+        </div>
+        <div
+          style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}
+          className="col-12"
+        >
+          <div
+            className="img-responsive col-lg-6 col-sm-12 "
+            style={{ marginTop: "2%" }}
+          >
+            <img
+              alt={" of menu app"}
+              style={{ height: "300px", overflow: "hidden" }}
+              src={rtr}
+              className="d-block w-100 img-responsive col-12  "
+            />
+          </div>
+          <div
+            className="img-responsive col-lg-6 col-sm-12 "
+            style={{ marginTop: "2%" }}
+          >
+            <img
+              alt={" of menu app"}
+              style={{ height: "300px", overflow: "hidden" }}
+              src={rtr2}
+              className="d-block w-100 img-responsive col-12  "
+            />
+          </div>
+          <div
+            className="img-responsive col-lg-6 col-sm-12 "
+            style={{ marginTop: "2%" }}
+          >
+            <img
+              alt={" of menu app"}
+              style={{ height: "300px", overflow: "hidden" }}
+              src={rtr3}
+              className="d-block w-100 img-responsive col-12  "
+            />
+          </div>
+          <div
+            className="img-responsive col-lg-6 col-sm-12 "
+            style={{ marginTop: "2%" }}
+          >
+            <img
+              alt={" of menu app"}
+              style={{ height: "300px", overflow: "hidden" }}
+              src={seqqure}
+              className="d-block w-100 img-responsive col-12  "
+            />
+          </div>
+          <div
+            className="img-responsive col-lg-6 col-sm-12 "
+            style={{ marginTop: "2%" }}
+          >
+            <img
+              alt={" of menu app"}
+              style={{ height: "300px", overflow: "hidden" }}
+              src={seqqure2}
+              className="d-block w-100 img-responsive col-12  "
+            />
           </div>
         </div>
       </div>

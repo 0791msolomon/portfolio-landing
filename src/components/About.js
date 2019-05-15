@@ -121,31 +121,46 @@ class About extends React.Component {
           >
             <p style={{ marginBottom: "4%", color: "black" }} c>
               <div style={{ textIndent: "50px" }}>
-                At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                blanditiis praesentium voluptatum deleniti atque corrupti quos
-                dolores et quas molestias excepturi sint occaecati cupiditate
-                non provident, similique sunt in culpa qui officia deserunt
-                mollitia animi, id est laborum et dolorum fuga. Et harum quidem
-                rerum facilis est et expedita distinctio. Nam libero tempore,
-                cum soluta nobis est eligendi optio cumque nihil impedit quo
-                minus id quod maxime placeat facere possimus, omnis voluptas
-                assumenda est, omnis dolor repellendus. Temporibus autem
-                quibusdam et aut officiis debitis aut rerum necessitatibus saepe
-                eveniet ut et voluptates repudiandae sint et molestiae non
-                recusandae. Itaque earum rerum hic tenetur a sapiente delectus,
-                ut aut reiciendis voluptatibus maiores alias consequatur aut
-                perferendis doloribus asperiores repellat.At vero eos et
-                accusamus et iusto odio dignissimos ducimus qui blanditiis
-                praesentium voluptatum deleniti atque corrupti quos dolores et
-                quas molestias excepturi sint occaecati cupiditate non
-                provident, similique sunt in culpa qui officia deserunt mollitia
-                animi, id est laborum et dolorum fuga. Et harum quidem rerum
-                facilis est et expedita distinctio. Nam libero tempore, cum
-                soluta nobis est eligendi optio cumque nihil impedit quo minus
-                id quod maxime placeat facere possimus, omnis voluptas assumenda
-                est, omnis dolor repellendus. Temporibus autem quibusdam et aut
-                officiis debitis aut rerum necessitatibus saepe eveniet ut et
-                voluptates repudiandae sint et molestiae non
+                <small>
+                  My name is Matt Solomon, I'm a 27 year full stack web
+                  developer from Cleveland Ohio. I graduated highschool in 2010
+                  and immediately left to join the Marines. Once I completed
+                  Bootcamp I was stationed in Camp Pendleton California where I
+                  spent the next 5 years of my enlistment as a Reconnaissance
+                  Marine. Between 2010 and 2015 I completed two deployments and
+                  was honorably discharged in June of 2015. After that I spent
+                  the next year attempting to join the Navy which didn't work
+                  out for circumstances beyond my control, which led me back to
+                  school in San Diego. Initially my plan was to pursue a career
+                  as a firefighter so I attended a few semesters with that being
+                  my goal. Some time in 2017 a friend of mine (who's a software
+                  engineer) introduced me to coding and recommended that I give
+                  it a shot and see if it was a good fit for me. Up until this
+                  point I didn't really have any experience with computers but
+                  decided I would give it a try by taking some courses on
+                  codecademy and team Treehouse. Immediately I became obsessed
+                  with the problem solving aspect that writing code offers and
+                  knew that it was what I wanted to do. I got in touch with my
+                  friend who recommended it to me and he suggested that I look
+                  into coding bootcamps because he'd worked with some guys who
+                  took that route and said that they highly recommended it. I
+                  did some digging and found a coding bootcamp in Los Angeles
+                  that allowed me to use my GI bill. I spent six months there
+                  and was put in touch with Seqqure company along with a group
+                  of about 12 other developers to build a MVP for them. After
+                  that finished up I started applying all over to begin my
+                  career as a developer and got an offer from Real Time Reviews
+                  in Flagstaff Arizona. I accepted the offer and worked there
+                  from Sep/Oct 2018 - May 2019. Unfortunately the company had to
+                  do some downsizing and being the most recently hired developer
+                  I was let go. I am now Currently searching for new work in the
+                  southern California area. Below you will see some of the
+                  technologies that I'm familiar with, but I'm always open to
+                  learning new things and constantly working to improve my
+                  skills as a developer! If you'd like to get in touch I can be
+                  reached at 440-488-8856 or you can visit the Contact Tab and
+                  send me an email. I look forward to hearing from you!
+                </small>
               </div>
             </p>
 
