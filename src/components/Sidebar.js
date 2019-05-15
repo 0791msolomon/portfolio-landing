@@ -28,6 +28,7 @@ const Sidebar = props => {
           </li>
           <li>
             <a
+              rel="noopener noreferrer"
               href="#pageSubmenu"
               data-toggle="collapse"
               aria-expanded="false"
@@ -42,6 +43,7 @@ const Sidebar = props => {
                 title="Apps are hosted for free on Heroku so they may take a while to load initially, if page fails on first attempt just refresh"
               >
                 <a
+                  rel="noopener noreferrer"
                   href="http://matthew-s-weather.herokuapp.com"
                   target="_blank"
                 >
@@ -56,6 +58,7 @@ const Sidebar = props => {
                 <a
                   href="http://matthew-s-higherLower.herokuapp.com"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   HigherLower
                 </a>
@@ -65,17 +68,21 @@ const Sidebar = props => {
                 data-placement="bottom"
                 title="Apps are hosted for free on Heroku so they may take a while to load initially, if page fails on first attempt just refresh"
               >
-                <a href="http://matthew-s-menu.herokuapp.com" target="_blank">
+                <a
+                  href="http://matthew-s-menu.herokuapp.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Restaurant Menu
                 </a>
               </li>
-              <li
+              {/* <li
                 data-toggle="tooltip"
                 data-placement="bottom"
                 title="Under Construction"
               >
                 <a>Voting</a>
-              </li>
+              </li> */}
             </ul>
           </li>
           <li>

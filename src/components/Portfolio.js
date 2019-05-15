@@ -7,31 +7,62 @@ import moment from "moment";
 import "../index.css";
 class Portfolio extends React.Component {
   state = {
-    weather: { name: "Weather Forecast" },
-    higherLower: { name: "Higher-Lower" },
-    menu: { name: "Restaurant Menu" },
-    selectedRepo: { name: "Weather Forecast" },
-    open: false
+    weather: {
+      name: "Weather Forecast",
+      description:
+        "Small app built to display humidity and temperature stats for a given area over the course of five days. This was built utilizing React & Bootstrap as well as OpenWeatherMap Api's to fetch the data. Project is fully responsive.",
+      repo: "portfolio-weather",
+      replacementName: "weather"
+    },
+    higherLower: {
+      name: "Higher-Lower",
+      description:
+        "Small guessing game built out utilizing React & Bootstrap. This example is strictly a client side application not utilizing a database of any kind. React Router is also implemented to switch between higher/lower and Love calculator which is also included. Project is fully responsive.",
+      repo: "portfolio-higherLower",
+      replacementName: "higherLower"
+    },
+    menu: {
+      name: "Restaurant Menu",
+      description:
+        "Restaurant Menu display built out utilizing React & Bootstrap. This example is stricly a client side application which was primarily built to show some different designs (includes parallax scroll). Redux is also implemented to choose between menu options. Project is fully responsive. ",
+      repo: "portfolio-menu",
+      replacementName: "menu"
+    },
+    selectedRepo: {},
+    commits: true,
+    info: true
   };
   componentDidMount = () => {
-    let arr = [];
-    axios
-      .get(
-        "https://api.github.com/repos/0791msolomon/portfolio-weather/commits"
-      )
-      .then(res => {
-        res.data.map(commit => {
-          arr.push(commit);
-        });
-      })
-      .then(() => console.log(arr));
+    let promiseArr = Object.values(this.state).map(item => {
+      if (!item.name) {
+        return;
+      } else {
+        return axios
+          .get(
+            `https://api.github.com/repos/0791msolomon/${
+              item.repo
+            }/commits?client_id=${
+              process.env.REACT_APP_CLIENTID
+            }&client_secret=${process.env.REACT_APP_CLIENT_SECRET}`
+          )
+          .then(res => {
+            let updatedItem = item;
+            updatedItem.commits = res.data;
+            this.setState({
+              [item.replacementName]: updatedItem
+            });
+          });
+      }
+    });
+    Promise.all(promiseArr).then(() =>
+      this.setState({ selectedRepo: this.state.weather })
+    );
   };
   setDisplay = e => {
     e.preventDefault();
     this.setState({ open: !this.state.open });
   };
   changeRepo = repo => {
-    console.log(repo);
     const { weather, higherLower, menu } = this.state;
     let obj = {};
     repo === "menu"
@@ -39,16 +70,40 @@ class Portfolio extends React.Component {
       : repo === "higherLower"
       ? (obj = higherLower)
       : (obj = weather);
-    this.setState(
-      {
-        selectedRepo: obj
-      },
-      () => console.log(this.state.selectedRepo)
+    this.setState({
+      selectedRepo: obj
+    });
+  };
+  mapCommits = () => {
+    let { selectedRepo } = this.state;
+    let arr = [];
+    selectedRepo.commits.map(commit => {
+      let obj = {
+        committer: commit.commit.committer.name,
+        email: commit.commit.committer.email,
+        commitTime: moment(commit.commit.committer.date).format("lll"),
+        message: commit.commit.message
+      };
+      arr.push(obj);
+    });
+    return (
+      <small style={{ display: "flex", flexDirection: "column" }}>
+        {arr.map((item, i) => {
+          return (
+            <li style={{ listStyle: "none", marginBottom: "1%" }} key={i}>
+              <small>{`-Time: ${item.commitTime}. Committer: ${
+                item.committer
+              }. Commit Message: ${item.message}. Email: ${item.email}`}</small>
+            </li>
+          );
+        })}
+      </small>
     );
   };
   render() {
     return (
       <div
+        className="col-12"
         style={{
           display: "flex",
           justifyContent: "center",
@@ -80,9 +135,10 @@ class Portfolio extends React.Component {
             <h3
               style={{ textAlign: "center", fontFamily: "open sans, roboto" }}
             >
-              Weather Forecast
+              Weather
             </h3>
             <img
+              alt={" of weather app"}
               onClick={() => this.changeRepo("weather")}
               style={{ height: "250px", overflow: "hidden" }}
               src={weather}
@@ -99,6 +155,7 @@ class Portfolio extends React.Component {
               Higher-Lower
             </h3>
             <img
+              alt={" of higher-lower app"}
               onClick={() => this.changeRepo("higherLower")}
               style={{ height: "250px", overflow: "hidden" }}
               src={higherlower}
@@ -115,6 +172,7 @@ class Portfolio extends React.Component {
               Restaurant Menu
             </h3>
             <img
+              alt={" of menu app"}
               onClick={() => this.changeRepo("menu")}
               style={{ height: "250px", overflow: "hidden" }}
               src={menu}
@@ -122,29 +180,77 @@ class Portfolio extends React.Component {
             />
           </div>
         </div>
-        <div className="container" style={{ marginTop: "3%" }}>
-          <p>
-            <button
-              className="btn "
-              data-toggle="collapse"
-              href="#collapseExample"
-              role="button"
-              style={{ backgroundColor: "#138496", color: "white" }}
-              aria-expanded="false"
-              aria-controls="collapseExample"
-            >
-              <span>Click to Hide or Show</span>
-            </button>
-          </p>
-          <div className="collapse show" id="collapseExample">
-            <b style={{ fontFamily: "Palatino, URW Palladio L, serif" }}>
-              {this.state.selectedRepo.name}
+        <div className="container col-12" style={{ marginTop: "3%" }}>
+          <div
+            className="col-12"
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              flexWrap: "wrap",
+              justifyContent: "flex-start"
+            }}
+          >
+            <p className="col-12">
+              <a
+                onClick={() => this.setState({ info: !this.state.info })}
+                style={{ margin: "2%" }}
+                className="btn btn-info col-lg-3 col-sm-12"
+                data-toggle="collapse"
+                href="#multiCollapseExample1"
+                role="button"
+                aria-expanded="false"
+                aria-controls="multiCollapseExample1"
+              >
+                {this.state.info ? "Hide Description" : "Show Description"}
+              </a>
+              <a
+                onClick={() => this.setState({ commits: !this.state.commits })}
+                style={{ margin: "2%" }}
+                className="btn btn-info col-lg-3 col-sm-12"
+                data-toggle="collapse"
+                href="#multiCollapseExample2"
+                role="button"
+                aria-expanded="false"
+                aria-controls="multiCollapseExample2"
+              >
+                {this.state.commits ? "Hide Commits" : "Show Commits"}
+              </a>
+            </p>
+            <b style={{ fontFamily: "Didot, serif" }}>
+              <u> {this.state.selectedRepo.name}</u>
             </b>
-            <div className="card card-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life
-              accusamus terry richardson ad squid. Nihil anim keffiyeh
-              helvetica, craft beer labore wes anderson cred nesciunt sapiente
-              ea proident.
+          </div>
+
+          <div className="row col-12">
+            <div className="col-lg-6 col-sm-12">
+              <div
+                className="collapse multi-collapse show"
+                id="multiCollapseExample1"
+              >
+                <div
+                  className="card card-body"
+                  style={{ display: "flex", flexDirection: "column" }}
+                >
+                  <p style={{ color: "black" }}>Project Description.</p>
+                  {/* <p style={{ color: "black" }}> */}
+                  <small>{this.state.selectedRepo.description}</small>
+                  {/* </p> */}
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-6 col-sm-12">
+              <div
+                className="collapse multi-collapse show  "
+                id="multiCollapseExample2"
+              >
+                <div
+                  className="card card-body  "
+                  style={{ display: "flex", flexDirection: "column" }}
+                >
+                  <p style={{ color: "black" }}>Commit History.</p>
+                  {this.state.selectedRepo.commits ? this.mapCommits() : null}
+                </div>
+              </div>
             </div>
           </div>
         </div>

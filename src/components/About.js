@@ -1,6 +1,6 @@
 import React from "react";
-import me from "./photos/me.png";
-import puppers from "./photos/puppers.png";
+// import me from "./photos/me.png";
+// import puppers from "./photos/puppers.png";
 import dunc from "./photos/dunc.png";
 import hux from "./photos/hux.png";
 import us from "./photos/us.png";
@@ -84,6 +84,7 @@ class About extends React.Component {
               style={{ padding: "5%", margin: "3%" }}
             >
               <img
+                alt={"matt and ashley"}
                 src={us}
                 style={{ border: "solid 15px #17a2b8" }}
                 className="d-block w-100 img-responsive rotate90"
@@ -94,6 +95,7 @@ class About extends React.Component {
               style={{ padding: "5%", margin: "3%" }}
             >
               <img
+                alt={"my youngest pup dunc"}
                 src={dunc}
                 style={{ border: "solid 15px #17a2b8" }}
                 className="d-block w-100 img-responsive rotate10"
@@ -104,6 +106,7 @@ class About extends React.Component {
               style={{ padding: "5%", margin: "3%" }}
             >
               <img
+                alt={"my oldest pup hux"}
                 src={hux}
                 style={{ border: "solid 15px #17a2b8" }}
                 className="d-block w-100 img-responsive rotate90"
@@ -407,9 +410,3 @@ class About extends React.Component {
   }
 }
 export default About;
-
-const plusBox = {
-  color: "#7386D5",
-  marginBottom: "3%",
-  padding: "0%"
-};

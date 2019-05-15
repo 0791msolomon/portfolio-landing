@@ -14,7 +14,11 @@ const Footer = props => {
         }}
       >
         <br />
-        <a href="https://www.facebook.com/mateo.solomon.16" target="_blank">
+        <a
+          href="https://www.facebook.com/mateo.solomon.16"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <i
             id="social-fb"
             className="fab fa-facebook-square fa-4x iconHover"
@@ -23,13 +27,18 @@ const Footer = props => {
         <a
           href="https://www.linkedin.com/in/matthew-solomon-a14683140/"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <i
             id="social-gp"
             className="fab fa-linkedin-square fa-4x iconHover"
           />
         </a>
-        <a href="https://github.com/0791msolomon" target="_blank">
+        <a
+          href="https://github.com/0791msolomon"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i id="social-em" className="fab fa-github-square fa-4x iconHover" />
         </a>
       </div>

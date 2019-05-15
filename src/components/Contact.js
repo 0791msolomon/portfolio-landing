@@ -1,5 +1,5 @@
 import React from "react";
-import axios from "axios";
+// import axios from "axios";
 import TextInputGroup from "./TextInputGroup";
 import validator from "validator";
 import * as contactServices from "../services/ContactServices";
@@ -12,7 +12,6 @@ class Contact extends React.Component {
       email: "",
       errors: {},
       subject: "",
-      lastName: "",
       body: ""
     };
   }
@@ -32,7 +31,7 @@ class Contact extends React.Component {
     });
   };
   sendInfo = e => {
-    const { firstName, lastName, email, company, body } = this.state;
+    const { firstName, email, body } = this.state;
     //Check for errors
     e.preventDefault();
     if (firstName.trim() === "") {
@@ -48,7 +47,7 @@ class Contact extends React.Component {
       return;
     }
 
-    let name = this.state.firstName + " " + this.state.lastName;
+    let name = this.state.firstName;
     contactServices.contactData(name, email, body).then(res => {
       console.log(res);
     });
@@ -68,7 +67,7 @@ class Contact extends React.Component {
             <div class="contact-info">
               <img
                 src="https://image.ibb.co/kUASdV/contact-image.png"
-                alt="image"
+                alt={"random "}
               />
               <h2>Contact Me</h2>
               <h4>I would love to hear from you!</h4>
@@ -78,22 +77,12 @@ class Contact extends React.Component {
             <div class="contact-form col-md-9 col-sm-12">
               <div class="form-group col-sm-10">
                 <TextInputGroup
-                  label={"First Name *"}
+                  label={"Name *"}
                   onChange={this.onChange}
                   value={this.state.firstName}
                   name={"firstName"}
                   placeholder="John"
                   error={errors.firstName}
-                />
-              </div>
-              <div class="form-group col-sm-10">
-                <TextInputGroup
-                  label={"Last Name"}
-                  onChange={this.onChange}
-                  value={this.state.lastName}
-                  name={"lastName"}
-                  placeholder="Doe"
-                  // error={errors.firstName}
                 />
               </div>
               <div class="form-group col-sm-10">
