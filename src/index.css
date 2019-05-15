@@ -268,3 +268,7 @@ ul ul a {
 .contact-form button:focus {
   box-shadow: none;
 }
+
+.repoCard:hover {
+  cursor: pointer;
+}

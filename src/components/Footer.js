@@ -2,10 +2,10 @@ import React from "react";
 import "../index.css";
 const Footer = props => {
   return (
-    <div class="container footer">
+    <div className="container footer">
       <hr />
       <div
-        class="text-center center-block col-lg-8 col-sm-12 "
+        className="text-center center-block col-lg-8 col-sm-12 "
         style={{
           display: "flex",
           flexDirection: "row",

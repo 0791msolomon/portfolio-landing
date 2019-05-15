@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 const Sidebar = props => {
   return (
     <div
-      class="wrapper"
+      className="wrapper"
       style={{ minHeight: "100%", margin: "0%", padding: "0%" }}
     >
       <nav id="sidebar" style={{ minHeight: "100%" }}>
-        <div class="sidebar-header">
+        <div className="sidebar-header">
           <h3 style={{ fontFamily: "open sans, roboto" }}>Matthew Solomon</h3>
           <hr
             style={{
@@ -20,7 +20,7 @@ const Sidebar = props => {
           />
         </div>
 
-        <ul class="list-unstyled components">
+        <ul className="list-unstyled components">
           <p>{"Info & Links"}</p>
 
           <li>
@@ -31,12 +31,16 @@ const Sidebar = props => {
               href="#pageSubmenu"
               data-toggle="collapse"
               aria-expanded="false"
-              class="dropdown-toggle"
+              className="dropdown-toggle"
             >
               Small Projects
             </a>
-            <ul class="collapse list-unstyled" id="pageSubmenu">
-              <li>
+            <ul className="collapse list-unstyled" id="pageSubmenu">
+              <li
+                data-toggle="tooltip"
+                data-placement="bottom"
+                title="Apps are hosted for free on Heroku so they may take a while to load initially, if page fails on first attempt just refresh"
+              >
                 <a
                   href="http://matthew-s-weather.herokuapp.com"
                   target="_blank"
@@ -44,7 +48,11 @@ const Sidebar = props => {
                   Weather
                 </a>
               </li>
-              <li>
+              <li
+                data-toggle="tooltip"
+                data-placement="bottom"
+                title="Apps are hosted for free on Heroku so they may take a while to load initially, if page fails on first attempt just refresh"
+              >
                 <a
                   href="http://matthew-s-higherLower.herokuapp.com"
                   target="_blank"
@@ -52,7 +60,11 @@ const Sidebar = props => {
                   HigherLower
                 </a>
               </li>
-              <li>
+              <li
+                data-toggle="tooltip"
+                data-placement="bottom"
+                title="Apps are hosted for free on Heroku so they may take a while to load initially, if page fails on first attempt just refresh"
+              >
                 <a href="http://matthew-s-menu.herokuapp.com" target="_blank">
                   Restaurant Menu
                 </a>
@@ -67,7 +79,7 @@ const Sidebar = props => {
             </ul>
           </li>
           <li>
-            <Link to="/demo">Demo Action</Link>
+            <Link to="/demo">Activity</Link>
           </li>
           <li>
             <Link to="/contact">Contact</Link>
