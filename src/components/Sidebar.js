@@ -10,7 +10,9 @@ const Sidebar = props => {
     >
       <nav id="sidebar" style={{ minHeight: "100%" }}>
         <div className="sidebar-header">
-          <h3 style={{ fontFamily: "open sans, roboto" }}>Matthew Solomon</h3>
+          <h3 style={{ fontFamily: "open sans, roboto" }}>
+            Matthew Solomon <i class="fas fa-cog fa-spin" />
+          </h3>
           <hr
             style={{
               fontWeight: "bold",
@@ -24,7 +26,9 @@ const Sidebar = props => {
           <p>{"Info & Links"}</p>
 
           <li>
-            <Link to="/">About</Link>
+            <Link to="/">
+              About <i class="far fa-question-circle " />
+            </Link>
           </li>
           <li>
             <a
@@ -47,7 +51,7 @@ const Sidebar = props => {
                   href="http://matthew-s-weather.herokuapp.com"
                   target="_blank"
                 >
-                  Weather
+                  Weather <i class="fas fa-umbrella" />
                 </a>
               </li>
               <li
@@ -60,7 +64,7 @@ const Sidebar = props => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  HigherLower
+                  HigherLower <i class="fas fa-sort" />
                 </a>
               </li>
               <li
@@ -73,7 +77,7 @@ const Sidebar = props => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Restaurant Menu
+                  Restaurant Menu <i class="far fa-calendar-minus" />
                 </a>
               </li>
               {/* <li
@@ -86,10 +90,14 @@ const Sidebar = props => {
             </ul>
           </li>
           <li>
-            <Link to="/demo">Activity</Link>
+            <Link to="/demo">
+              Activity <i class="fas fa-chart-line" />
+            </Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact">
+              Contact <i class="far fa-comment-alt" />
+            </Link>
           </li>
         </ul>
       </nav>

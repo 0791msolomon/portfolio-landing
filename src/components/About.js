@@ -5,7 +5,6 @@ import dunc from "./photos/dunc.png";
 import hux from "./photos/hux.png";
 import us from "./photos/us.png";
 import { Collapse } from "react-collapse";
-
 import "../index.css";
 class About extends React.Component {
   state = {
@@ -22,7 +21,7 @@ class About extends React.Component {
   render() {
     return (
       <div
-        className="container"
+        className="container  "
         style={{
           display: "flex",
           flexDirection: "column",
@@ -41,6 +40,7 @@ class About extends React.Component {
           }}
         >
           <div
+            className="fadeInDown2"
             style={{
               display: "flex",
               flexDirection: "column",
@@ -73,14 +73,14 @@ class About extends React.Component {
           }}
         >
           <div
-            className="col-lg-4 col-sm-12"
+            className="col-lg-4 col-sm-12 "
             style={{
               display: "flex",
               flexDirection: "column"
             }}
           >
             <div
-              className="img-responsive"
+              className="img-responsive fadeInDown3"
               style={{ padding: "5%", margin: "3%" }}
             >
               <img
@@ -91,7 +91,7 @@ class About extends React.Component {
               />
             </div>
             <div
-              className="img-responsive"
+              className="img-responsive fadeInDown2"
               style={{ padding: "5%", margin: "3%" }}
             >
               <img
@@ -102,7 +102,7 @@ class About extends React.Component {
               />
             </div>
             <div
-              className="img-responsive"
+              className="img-responsive fadeInDown1"
               style={{ padding: "5%", margin: "3%" }}
             >
               <img
@@ -119,54 +119,53 @@ class About extends React.Component {
               margin: "4%"
             }}
           >
-            <p style={{ marginBottom: "4%", color: "black" }} c>
-              <div style={{ textIndent: "50px" }}>
-                <small>
-                  My name is Matt Solomon. I’m a 27-year-old full stack web
-                  developer originally from Cleveland, Ohio. I graduated high
-                  school in 2010 and immediately left to join the Marines. Once
-                  I completed Bootcamp, I was stationed at Camp Pendleton,
-                  California where I spent the next 5 years of my enlistment as
-                  a Reconnaissance Marine. Between 2010 and 2015, I completed
-                  two deployments and was honorably discharged in June of 2015.
-                  After leaving the Marine Corps, my initial plan was to pursue
-                  a career as a firefighter. With that goal in mind, I attended
-                  a few semesters of college courses. Some time in 2017, a
-                  friend of mine who is a software engineer introduced me to
-                  coding and recommended that I do some research and see if it
-                  was something I might be interested in. Up to that point, I
-                  didn't really have much experience with computers or coding,
-                  but decided I would give it a try. I invested in some courses
-                  on Codecademy as well as team Treehouse. I immediately became
-                  obsessed with the problem solving aspect that writing code
-                  offers and knew that it would be part of my future. I reached
-                  out to with my friend who had originally introduced me to the
-                  idea and he suggested that I look into coding bootcamps; He'd
-                  worked with some guys who took that route and said they’d
-                  highly recommended it. I did some probing and found a coding
-                  bootcamp in Los Angeles that allowed me to use my GI bill. I
-                  spent six months there and was put in touch with Seqqure
-                  company, along with a group of about 12 other developers, to
-                  build an MVP for them. After successful completion of building
-                  out the MVP, I started applying all over to begin my career as
-                  a developer. My job search led to an offer from Real Time
-                  Reviews in Flagstaff, Arizona. Dedicated to the idea of
-                  investing in my career and future, I accepted the offer,
-                  relocated, and worked there from September, 2018 through May,
-                  2019. Unfortunately, the company underwent some restructuring
-                  and chose to outsource most of their positions. I’m grateful
-                  for the experience and can say with certainty that my ability
-                  as a developer has grown exponentially during my time there. I
-                  am currently searching for a new position in southern
-                  California. Below, you will see some of the technologies that
-                  I'm competent with. I’m open and eager to learning new things
-                  and constantly working to improve my skills as a developer! If
-                  you'd like to get in touch, I can be reached at 440-488-8856
-                  or you can visit the Contact Tab and send me an email. I look
-                  forward to hearing from you!
-                </small>
-              </div>
-            </p>
+            {/* <p  > */}
+            <div style={{ textIndent: "50px" }} className="fadeInDown1">
+              <small style={{ marginBottom: "4%", color: "black" }}>
+                My name is Matt Solomon. I’m a 27-year-old full stack web
+                developer originally from Cleveland, Ohio. I graduated high
+                school in 2010 and immediately left to join the Marines. Once I
+                completed Bootcamp, I was stationed at Camp Pendleton,
+                California where I spent the next 5 years of my enlistment as a
+                Reconnaissance Marine. Between 2010 and 2015, I completed two
+                deployments and was honorably discharged in June of 2015. After
+                leaving the Marine Corps, my initial plan was to pursue a career
+                as a firefighter. With that goal in mind, I attended a few
+                semesters of college courses. Some time in 2017, a friend of
+                mine who is a software engineer introduced me to coding and
+                recommended that I do some research and see if it was something
+                I might be interested in. Up to that point, I didn't really have
+                much experience with computers or coding, but decided I would
+                give it a try. I invested in some courses on Codecademy as well
+                as team Treehouse. I immediately became obsessed with the
+                problem solving aspect that writing code offers and knew that it
+                would be part of my future. I reached out to with my friend who
+                had originally introduced me to the idea and he suggested that I
+                look into coding bootcamps; He'd worked with some guys who took
+                that route and said they’d highly recommended it. I did some
+                probing and found a coding bootcamp in Los Angeles that allowed
+                me to use my GI bill. I spent six months there and was put in
+                touch with Seqqure company, along with a group of about 12 other
+                developers, to build an MVP for them. After successful
+                completion of building out the MVP, I started applying all over
+                to begin my career as a developer. My job search led to an offer
+                from Real Time Reviews in Flagstaff, Arizona. Dedicated to the
+                idea of investing in my career and future, I accepted the offer,
+                relocated, and worked there from September, 2018 through May,
+                2019. Unfortunately, the company underwent some restructuring
+                and chose to outsource most of their positions. I’m grateful for
+                the experience and can say with certainty that my ability as a
+                developer has grown exponentially during my time there. I am
+                currently searching for a new position in southern California.
+                Below, you will see some of the technologies that I'm competent
+                with. I’m open and eager to learning new things and constantly
+                working to improve my skills as a developer! If you'd like to
+                get in touch, I can be reached at 440-488-8856 or you can visit
+                the Contact Tab and send me an email. I look forward to hearing
+                from you!
+              </small>
+            </div>
+            {/* </p> */}
 
             <br />
             <div
@@ -178,7 +177,7 @@ class About extends React.Component {
               }}
             >
               <div
-                className="col-12"
+                className="col-12 fadeInDown1"
                 style={{
                   display: "flex",
                   flexDirection: "row",
@@ -333,7 +332,7 @@ class About extends React.Component {
           </div>
           <hr />
           <div
-            className="col-lg-2 col-sm-12"
+            className="col-lg-2 col-sm-12 "
             style={{
               marginTop: "10%",
               display: "flex",
@@ -342,6 +341,7 @@ class About extends React.Component {
             }}
           >
             <h6
+              className="fadeInDown3"
               style={{
                 alignSelf: "center",
                 color: "#7386D5",
@@ -351,6 +351,7 @@ class About extends React.Component {
               Work History
             </h6>
             <h5
+              className="fadeInDown3"
               style={{
                 alignSelf: "center",
                 color: "#7386D5",
@@ -360,6 +361,7 @@ class About extends React.Component {
               {"&"}
             </h5>
             <h6
+              className="fadeInDown3"
               style={{
                 alignSelf: "center",
                 color: "#7386D5",
@@ -371,55 +373,82 @@ class About extends React.Component {
             <br />
             <i
               style={{ alignSelf: "center", color: "grey", fontWeight: "bold" }}
-              className="fa fa-chevron-down	"
+              className="fa fa-chevron-down	fadeInDown3"
             />
             <br />
-            <p style={{ alignSelf: "center", color: "#7386D5" }}>
+            <p
+              style={{ alignSelf: "center", color: "#7386D5" }}
+              className="fadeInDown2"
+            >
               <small>USMC</small>
             </p>
-            <p style={{ alignSelf: "center", color: "#17a2b8" }}>
+            <p
+              style={{ alignSelf: "center", color: "#17a2b8" }}
+              className="fadeInDown2"
+            >
               <small>Recon Marine</small>
             </p>
-            <p style={{ alignSelf: "center", color: "#17a2b8" }}>
+            <p
+              style={{ alignSelf: "center", color: "#17a2b8" }}
+              className="fadeInDown2"
+            >
               <small>Jun 2010-June 2015</small>
             </p>
             <i
               style={{ alignSelf: "center", color: "grey", fontWeight: "bold" }}
-              className="fa fa-chevron-down	"
+              className="fa fa-chevron-down	fadeInDown2"
             />{" "}
             <i
               style={{ alignSelf: "center", color: "grey", fontWeight: "bold" }}
-              className="fa fa-chevron-down	"
+              className="fa fa-chevron-down	fadeInDown2"
             />
-            <p style={{ alignSelf: "center", color: "#7386D5" }}>
+            <p
+              style={{ alignSelf: "center", color: "#7386D5" }}
+              className="fadeInDown1"
+            >
               <small>Seqqure</small>
             </p>
-            <p style={{ alignSelf: "center", color: "#17a2b8" }}>
+            <p
+              style={{ alignSelf: "center", color: "#17a2b8" }}
+              className="fadeInDown1"
+            >
               <small>Full Stack Dev</small>
             </p>
-            <p style={{ alignSelf: "center", color: "#17a2b8" }}>
+            <p
+              style={{ alignSelf: "center", color: "#17a2b8" }}
+              className="fadeInDown1"
+            >
               <small>Jan 2018-Sep 2018</small>
             </p>
             <i
               style={{ alignSelf: "center", color: "grey", fontWeight: "bold" }}
-              className="fa fa-chevron-down	"
+              className="fa fa-chevron-down	fadeInDown1"
             />
             <i
               style={{ alignSelf: "center", color: "grey", fontWeight: "bold" }}
-              className="fa fa-chevron-down	"
+              className="fa fa-chevron-down	fadeInDown1"
             />{" "}
             <i
               style={{ alignSelf: "center", color: "grey", fontWeight: "bold" }}
-              className="fa fa-chevron-down	"
+              className="fa fa-chevron-down	fadeInDown1"
             />
             <br />
-            <p style={{ alignSelf: "center", color: "#7386D5" }}>
+            <p
+              style={{ alignSelf: "center", color: "#7386D5" }}
+              className="fadeInDown1"
+            >
               <small>RTR</small>
             </p>
-            <p style={{ alignSelf: "center", color: "#17a2b8" }}>
+            <p
+              style={{ alignSelf: "center", color: "#17a2b8" }}
+              className="fadeInDown1"
+            >
               <small>React Dev</small>
             </p>
-            <p style={{ alignSelf: "center", color: "#17a2b8" }}>
+            <p
+              style={{ alignSelf: "center", color: "#17a2b8" }}
+              className="fadeInDown1"
+            >
               <small>Sep 2018-Present</small>
             </p>
           </div>

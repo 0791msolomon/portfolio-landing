@@ -272,3 +272,63 @@ ul ul a {
 .repoCard:hover {
   cursor: pointer;
 }
+
+.fadeInFirst {
+  animation-duration: 3s;
+  animation: fadeInRightBig 1s;
+  animation-iteration-count: 1;
+}
+.fadeInSecond {
+  animation-duration: 3s;
+  animation: fadeInRightBig 1.5s;
+  animation-iteration-count: 1;
+}
+
+.fadeInDown1 {
+  animation-duration: 2s;
+  animation: fadeInDownBig 1s;
+  animation-iteration-count: 1;
+}
+
+.fadeInDown2 {
+  animation-duration: 2s;
+  animation: fadeInDownBig 2s;
+  animation-iteration-count: 1;
+}
+.fadeInDown3 {
+  animation-duration: 2s;
+  animation: fadeInDownBig 3s;
+  animation-iteration-count: 1;
+}
+
+.fadeInRightFirst {
+  animation-duration: 1s;
+  animation: fadeInRightBig 2s;
+  animation-iteration-count: 1;
+}
+.fadeInRightSecond {
+  animation-duration: 1s;
+  animation: fadeInRightBig 2.5s;
+  animation-iteration-count: 1;
+}
+
+.fadeInLeft1 {
+  animation-duration: 1s;
+  animation: fadeInLeftBig 1s;
+  animation-iteration-count: 1;
+}
+.fadeInLeft2 {
+  animation-duration: 1s;
+  animation: fadeInLeftBig 1.5s;
+  animation-iteration-count: 1;
+}
+.fadeInLeft3 {
+  animation-duration: 1s;
+  animation: fadeInLeftBig 2s;
+  animation-iteration-count: 1;
+}
+.fadeInLeft4 {
+  animation-duration: 1s;
+  animation: fadeInLeftBig 2.5s;
+  animation-iteration-count: 1;
+}

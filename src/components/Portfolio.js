@@ -117,10 +117,15 @@ class Portfolio extends React.Component {
         }}
       >
         <div
-          className="jumbotron jumbotron-fluid"
-          style={{ backgroundColor: "#7386d5", color: "white" }}
+          className="jumbotron jumbotron-fluid fadeInRightFirst"
+          style={{
+            backgroundColor: "#7386d5",
+            color: "white",
+            paddingTop: "1%",
+            paddingBottom: "1%"
+          }}
         >
-          <div className="container">
+          <div className="container" style={{}}>
             <h4 style={{ fontFamily: "open sans, roboto" }}>Github Repos</h4>
             <p className="lead">
               <small style={{ color: "white" }}>
@@ -138,7 +143,7 @@ class Portfolio extends React.Component {
           style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}
         >
           <div
-            className="img-responsive col-lg-4 col-sm-12 "
+            className="img-responsive col-lg-3 col-sm-12 fadeInLeft4"
             style={{ marginTop: "2%" }}
           >
             <h3
@@ -149,13 +154,30 @@ class Portfolio extends React.Component {
             <img
               alt={" of weather app"}
               onClick={() => this.changeRepo("weather")}
-              style={{ height: "250px", overflow: "hidden" }}
+              style={{ height: "200px", overflow: "hidden" }}
               src={weather}
               className="d-block w-100 img-responsive col-12 repoCard "
             />
           </div>
           <div
-            className="img-responsive col-lg-4 col-sm-12 "
+            className="img-responsive col-lg-3 col-sm-12  fadeInLeft3"
+            style={{ marginTop: "2%" }}
+          >
+            <h3
+              style={{ textAlign: "center", fontFamily: "open sans, roboto" }}
+            >
+              Weather
+            </h3>
+            <img
+              alt={" of weather app"}
+              onClick={() => this.changeRepo("weather")}
+              style={{ height: "200px", overflow: "hidden" }}
+              src={weather}
+              className="d-block w-100 img-responsive col-12 repoCard "
+            />
+          </div>
+          <div
+            className="img-responsive col-lg-3 col-sm-12 fadeInLeft2"
             style={{ marginTop: "2%" }}
           >
             <h3
@@ -166,13 +188,13 @@ class Portfolio extends React.Component {
             <img
               alt={" of higher-lower app"}
               onClick={() => this.changeRepo("higherLower")}
-              style={{ height: "250px", overflow: "hidden" }}
+              style={{ height: "200px", overflow: "hidden" }}
               src={higherlower}
               className="d-block w-100 img-responsive col-12 repoCard "
             />
           </div>
           <div
-            className="img-responsive col-lg-4 col-sm-12 "
+            className="img-responsive col-lg-3 col-sm-12 fadeInLeft1"
             style={{ marginTop: "2%" }}
           >
             <h3
@@ -183,7 +205,7 @@ class Portfolio extends React.Component {
             <img
               alt={" of menu app"}
               onClick={() => this.changeRepo("menu")}
-              style={{ height: "250px", overflow: "hidden" }}
+              style={{ height: "200px", overflow: "hidden" }}
               src={menu}
               className="d-block w-100 img-responsive col-12 repoCard "
             />
@@ -203,7 +225,7 @@ class Portfolio extends React.Component {
               <a
                 onClick={() => this.setState({ info: !this.state.info })}
                 style={{ margin: "2%" }}
-                className="btn btn-info col-lg-3 col-sm-12"
+                className="btn btn-info col-lg-3 col-sm-12 fadeInRightFirst"
                 data-toggle="collapse"
                 href="#multiCollapseExample1"
                 role="button"
@@ -215,7 +237,7 @@ class Portfolio extends React.Component {
               <a
                 onClick={() => this.setState({ commits: !this.state.commits })}
                 style={{ margin: "2%" }}
-                className="btn btn-info col-lg-3 col-sm-12"
+                className="btn btn-info col-lg-3 col-sm-12 fadeInRightSecond"
                 data-toggle="collapse"
                 href="#multiCollapseExample2"
                 role="button"
@@ -225,19 +247,22 @@ class Portfolio extends React.Component {
                 {this.state.commits ? "Hide Commits" : "Show Commits"}
               </a>
             </p>
-            <b style={{ fontFamily: "Didot, serif" }}>
+            <b
+              style={{ fontFamily: "Didot, serif" }}
+              className="fadeInRightFirst"
+            >
               <u> {this.state.selectedRepo.name}</u>
             </b>
           </div>
 
           <div className="row col-12">
-            <div className="col-lg-6 col-sm-12">
+            <div className="col-lg-6 col-sm-12 fadeInRightFirst">
               <div
-                className="collapse multi-collapse show"
+                className="collapse multi-collapse show "
                 id="multiCollapseExample1"
               >
                 <div
-                  className="card card-body"
+                  className="card card-body "
                   style={{ display: "flex", flexDirection: "column" }}
                 >
                   <p style={{ color: "black" }}>Project Description.</p>
@@ -247,7 +272,7 @@ class Portfolio extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="col-lg-6 col-sm-12">
+            <div className="col-lg-6 col-sm-12 fadeInRightSecond">
               <div
                 className="collapse multi-collapse show  "
                 id="multiCollapseExample2"
@@ -264,11 +289,13 @@ class Portfolio extends React.Component {
           </div>
         </div>
         <div
-          className="jumbotron jumbotron-fluid"
+          className="jumbotron jumbotron-fluid fadeInLeft1"
           style={{
             marginTop: "3%",
             backgroundColor: "#7386d5",
-            color: "white"
+            color: "white",
+            paddingTop: "1%",
+            paddingBottom: "1%"
           }}
         >
           <div className="container">
@@ -281,7 +308,7 @@ class Portfolio extends React.Component {
         </div>
         <div
           style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}
-          className="col-12"
+          className="col-12 fadeInRightSecond"
         >
           <div
             className="img-responsive col-lg-6 col-sm-12 "
