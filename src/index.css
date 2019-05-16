@@ -145,8 +145,15 @@ ul ul a {
   cursor: pointer;
   opacity: 0.7;
 }
+.collapseBtn {
+  background-color: #17a2b8;
+  color: white;
+  font-weight: bold;
+}
 
 .collapseBtn:hover {
+  background-color: #7386d5;
+  /* color: #7386d5; */
   cursor: pointer;
   -webkit-animation: pulse 1s;
   animation: pulse 1s;

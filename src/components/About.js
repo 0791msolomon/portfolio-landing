@@ -208,11 +208,6 @@ class About extends React.Component {
                   }}
                 >
                   <button
-                    style={{
-                      backgroundColor: "#17a2b8",
-                      color: "white",
-                      fontWeight: "bold"
-                    }}
                     className="form-control collapseBtn"
                     onClick={() => this.setState({ front: !this.state.front })}
                   >
@@ -243,12 +238,6 @@ class About extends React.Component {
                   }}
                 >
                   <button
-                    style={{
-                      backgroundColor: "#17a2b8",
-
-                      color: "white",
-                      fontWeight: "bold"
-                    }}
                     className="form-control collapseBtn"
                     onClick={() =>
                       this.setState({ middle: !this.state.middle })
@@ -273,12 +262,6 @@ class About extends React.Component {
                   }}
                 >
                   <button
-                    style={{
-                      backgroundColor: "#17a2b8",
-
-                      color: "white",
-                      fontWeight: "bold"
-                    }}
                     className="form-control collapseBtn"
                     onClick={() => this.setState({ back: !this.state.back })}
                   >
@@ -301,12 +284,6 @@ class About extends React.Component {
                   }}
                 >
                   <button
-                    style={{
-                      backgroundColor: "#17a2b8",
-
-                      color: "white",
-                      fontWeight: "bold"
-                    }}
                     className="form-control collapseBtn"
                     onClick={() => this.setState({ other: !this.state.other })}
                   >
