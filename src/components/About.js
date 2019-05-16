@@ -128,19 +128,22 @@ class About extends React.Component {
                 completed Bootcamp, I was stationed at Camp Pendleton,
                 California where I spent the next 5 years of my enlistment as a
                 Reconnaissance Marine. Between 2010 and 2015, I completed two
-                deployments and was honorably discharged in June of 2015. After
-                leaving the Marine Corps, my initial plan was to pursue a career
-                as a firefighter. With that goal in mind, I attended a few
-                semesters of college courses. Some time in 2017, a friend of
-                mine who is a software engineer introduced me to coding and
-                recommended that I do some research and see if it was something
-                I might be interested in. Up to that point, I didn't really have
-                much experience with computers or coding, but decided I would
-                give it a try. I invested in some courses on Codecademy as well
-                as team Treehouse. I immediately became obsessed with the
-                problem solving aspect that writing code offers and knew that it
-                would be part of my future. I reached out to with my friend who
-                had originally introduced me to the idea and he suggested that I
+                deployments as well as conduct countless hours of training which
+                taught me self-discipline, commitment, and leadership amongst
+                other things, which I believe transfer over to what I'm doing
+                now. In June 2015 I was honorably discharged. After leaving the
+                Marine Corps, my initial plan was to pursue a career as a
+                firefighter. With that goal in mind, I attended a few semesters
+                of college courses. Some time in 2017, a friend of mine who is a
+                software engineer introduced me to coding and recommended that I
+                do some research and see if it was something I might be
+                interested in. Up to that point, I didn't really have much
+                experience with computers or coding, but decided I would give it
+                a try. I invested in some courses on Codecademy as well as team
+                Treehouse. I immediately became obsessed with the problem
+                solving aspect that writing code offers and knew that it would
+                be part of my future. I reached out to with my friend who had
+                originally introduced me to the idea and he suggested that I
                 look into coding bootcamps; He'd worked with some guys who took
                 that route and said they’d highly recommended it. I did some
                 probing and found a coding bootcamp in Los Angeles that allowed
