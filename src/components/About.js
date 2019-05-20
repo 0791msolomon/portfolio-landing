@@ -119,8 +119,7 @@ class About extends React.Component {
               margin: "4%"
             }}
           >
-            {/* <p  > */}
-            <div style={{ textIndent: "50px" }} className="fadeInDown1">
+            <div className="fadeInDown1 aboutMebio">
               <small style={{ marginBottom: "4%", color: "black" }}>
                 My name is Matt Solomon. I’m a 27-year-old full stack web
                 developer originally from Cleveland, Ohio. I graduated high
@@ -300,6 +299,7 @@ class About extends React.Component {
                     <li style={{ listStyle: "none" }}>Robo 3T</li>
                     <li style={{ listStyle: "none" }}>Advanced REST Client</li>
                     <li style={{ listStyle: "none" }}>Postman</li>
+                    <li style={{ listStyle: "none" }}>Puppeteer</li>
                     <li style={{ listStyle: "none" }}>TFS</li>
                     <li style={{ listStyle: "none" }}>Git</li>
                     <li style={{ listStyle: "none" }}>Trello</li>

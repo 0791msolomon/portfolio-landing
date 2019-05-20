@@ -8,6 +8,7 @@ import rtr2 from "./photos/rtr2.png";
 import rtr3 from "./photos/rtr3.png";
 import seqqure from "./photos/seqqure.png";
 import seqqure2 from "./photos/seqqure2.png";
+import blog from "./photos/blog.png";
 
 import moment from "moment";
 import "../index.css";
@@ -34,6 +35,14 @@ class Portfolio extends React.Component {
       repo: "portfolio-menu",
       replacementName: "menu"
     },
+    blog: {
+      name: "Blog",
+      description:
+        "Full stack application utilizing Mongo/Express/React/Node as well as Redux for state management. Currently under construction but is viewable",
+      repo: "portfolio-blog",
+      replacementName: "blog"
+    },
+
     selectedRepo: {},
     commits: true,
     info: true
@@ -69,12 +78,14 @@ class Portfolio extends React.Component {
     this.setState({ open: !this.state.open });
   };
   changeRepo = repo => {
-    const { weather, higherLower, menu } = this.state;
+    const { weather, higherLower, menu, blog } = this.state;
     let obj = {};
     repo === "menu"
       ? (obj = menu)
       : repo === "higherLower"
       ? (obj = higherLower)
+      : repo === "blog"
+      ? (obj = blog)
       : (obj = weather);
     this.setState({
       selectedRepo: obj
@@ -166,13 +177,13 @@ class Portfolio extends React.Component {
             <h3
               style={{ textAlign: "center", fontFamily: "open sans, roboto" }}
             >
-              Weather
+              Blog
             </h3>
             <img
-              alt={" of weather app"}
-              onClick={() => this.changeRepo("weather")}
+              alt={" Blog App"}
+              onClick={() => this.changeRepo("blog")}
               style={{ height: "200px", overflow: "hidden" }}
-              src={weather}
+              src={blog}
               className="d-block w-100 img-responsive col-12 repoCard "
             />
           </div>

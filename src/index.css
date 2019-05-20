@@ -8,6 +8,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: grey;
 }
 html {
   margin: 0;
@@ -339,3 +340,13 @@ ul ul a {
   animation: fadeInLeftBig 2.5s;
   animation-iteration-count: 1;
 }
+
+.aboutMebio {
+  padding: 5%;
+  border: 5px inset #4099ff;
+  border-radius: 40px 40px 40px 40px;
+  text-indent: 50px;
+}
+/* border: 5px inset #1C6EA4; */
+/* border-radius: 40px 40px 40px 40px;
+textIndent: "50px */

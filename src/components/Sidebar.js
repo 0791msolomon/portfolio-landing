@@ -44,6 +44,19 @@ const Sidebar = props => {
               <li
                 data-toggle="tooltip"
                 data-placement="bottom"
+                title="Incomplete, components under construction but it is viewable"
+              >
+                <a
+                  rel="noopener noreferrer"
+                  href="http://matthew-s-blog.herokuapp.com"
+                  target="_blank"
+                >
+                  Blog <i class="fas fa-comment" />
+                </a>
+              </li>
+              <li
+                data-toggle="tooltip"
+                data-placement="bottom"
                 title="Apps are hosted for free on Heroku so they may take a while to load initially, if page fails on first attempt just refresh"
               >
                 <a
