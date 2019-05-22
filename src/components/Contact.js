@@ -3,6 +3,9 @@ import TextInputGroup from "./TextInputGroup";
 import BodyInput from "./BodyInput";
 import validator from "validator";
 import * as contactServices from "../services/ContactServices";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 class Contact extends React.Component {
   constructor(props) {
     super(props);
@@ -52,9 +55,38 @@ class Contact extends React.Component {
       return;
     }
     let name = this.state.firstName;
-    contactServices.contactData(name, email, body).then(res => {
-      console.log(res);
-    });
+    contactServices
+      .contactData(name, email, body)
+      .then(res => {
+        console.log(res);
+        toast.info("Your message has been sent!", {
+          position: "top-right",
+          autoClose: 2300,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true
+        });
+        this.setState({
+          firstName: "",
+          company: "",
+          email: "",
+          errors: {},
+          subject: "",
+          body: ""
+        });
+      })
+      .catch(err => {
+        console.log(err);
+        toast.error("Error processing request", {
+          position: "top-right",
+          autoClose: 2300,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true
+        });
+      });
 
     this.setState({
       errors: {}
@@ -64,6 +96,17 @@ class Contact extends React.Component {
     const { errors } = this.state;
     return (
       <div className="container contact">
+        <ToastContainer
+          position="top-right"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnVisibilityChange
+          draggable
+          pauseOnHover
+        />
         <div
           style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}
         >
