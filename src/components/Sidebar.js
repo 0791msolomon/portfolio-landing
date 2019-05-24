@@ -44,7 +44,7 @@ const Sidebar = props => {
               <li
                 data-toggle="tooltip"
                 data-placement="bottom"
-                title="Incomplete, components under construction but it is viewable"
+                title="Example Blog Project"
               >
                 <a
                   rel="noopener noreferrer"

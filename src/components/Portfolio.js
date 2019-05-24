@@ -38,7 +38,7 @@ class Portfolio extends React.Component {
     blog: {
       name: "Blog",
       description:
-        "Full stack application utilizing Mongo/Express/React/Node as well as Redux for state management. Currently under construction but is viewable",
+        "Full stack application utilizing Mongo/Express/React/Node as well as Redux for state management. Project includes bootstrap for resonsive design. ",
       repo: "portfolio-blog",
       replacementName: "blog"
     },
@@ -259,10 +259,23 @@ class Portfolio extends React.Component {
               </a>
             </p>
             <b
-              style={{ fontFamily: "Didot, serif" }}
+              style={{
+                fontFamily: "Didot, serif",
+                display: "flex",
+                flexDirection: "column"
+              }}
               className="fadeInRightFirst"
             >
               <u> {this.state.selectedRepo.name}</u>
+              <small>Link to repo</small>
+              <a
+                className="repoLink"
+                href={`https://github.com/0791msolomon/${
+                  this.state.selectedRepo.repo
+                }`}
+              >{`https://github.com/0791msolomon/${
+                this.state.selectedRepo.repo
+              }`}</a>
             </b>
           </div>
 
@@ -279,7 +292,6 @@ class Portfolio extends React.Component {
                   <p style={{ color: "black" }}>Project Description.</p>
                   {/* <p style={{ color: "black" }}> */}
                   <small>{this.state.selectedRepo.description}</small>
-                  {/* </p> */}
                 </div>
               </div>
             </div>

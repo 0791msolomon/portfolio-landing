@@ -347,6 +347,13 @@ ul ul a {
   border-radius: 40px 40px 40px 40px;
   text-indent: 50px;
 }
+.repoLink {
+  color: #7386d5;
+}
+.repoLink:hover {
+  color: blue;
+  font-weight: bold;
+}
 /* border: 5px inset #1C6EA4; */
 /* border-radius: 40px 40px 40px 40px;
 textIndent: "50px */
