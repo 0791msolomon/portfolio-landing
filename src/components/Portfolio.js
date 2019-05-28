@@ -9,7 +9,7 @@ import rtr3 from "./photos/rtr3.png";
 import seqqure from "./photos/seqqure.png";
 import seqqure2 from "./photos/seqqure2.png";
 import blog from "./photos/blog.png";
-
+import realty from "./photos/realty.png";
 import moment from "moment";
 import "../index.css";
 class Portfolio extends React.Component {
@@ -41,6 +41,13 @@ class Portfolio extends React.Component {
         "Full stack application utilizing Mongo/Express/React/Node as well as Redux for state management. Project includes bootstrap for resonsive design. ",
       repo: "portfolio-blog",
       replacementName: "blog"
+    },
+    realty: {
+      name: "Realty",
+      description:
+        "Full stack mock realtor application utilizing bootstrap for responsive layout. Images/addresses for example properties were acquired using Cheerio to scrape website. Project includes Redux for state management. Currently not viewable.",
+      repo: "portfolio-realty",
+      replacementName: "realty"
     },
 
     selectedRepo: {},
@@ -78,7 +85,7 @@ class Portfolio extends React.Component {
     this.setState({ open: !this.state.open });
   };
   changeRepo = repo => {
-    const { weather, higherLower, menu, blog } = this.state;
+    const { weather, higherLower, menu, blog, realty } = this.state;
     let obj = {};
     repo === "menu"
       ? (obj = menu)
@@ -86,6 +93,8 @@ class Portfolio extends React.Component {
       ? (obj = higherLower)
       : repo === "blog"
       ? (obj = blog)
+      : repo === "realty"
+      ? (obj = realty)
       : (obj = weather);
     this.setState({
       selectedRepo: obj
@@ -170,6 +179,7 @@ class Portfolio extends React.Component {
               className="d-block w-100 img-responsive col-12 repoCard "
             />
           </div>
+
           <div
             className="img-responsive col-lg-3 col-sm-12  fadeInLeft3"
             style={{ marginTop: "2%" }}
@@ -218,6 +228,23 @@ class Portfolio extends React.Component {
               onClick={() => this.changeRepo("menu")}
               style={{ height: "200px", overflow: "hidden" }}
               src={menu}
+              className="d-block w-100 img-responsive col-12 repoCard "
+            />
+          </div>
+          <div
+            className="img-responsive col-lg-3 col-sm-12 fadeInRightFirst"
+            style={{ marginTop: "2%" }}
+          >
+            <h3
+              style={{ textAlign: "center", fontFamily: "open sans, roboto" }}
+            >
+              Realty
+            </h3>
+            <img
+              alt={"realty app"}
+              onClick={() => this.changeRepo("realty")}
+              style={{ height: "200px", overflow: "hidden" }}
+              src={realty}
               className="d-block w-100 img-responsive col-12 repoCard "
             />
           </div>

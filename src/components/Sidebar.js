@@ -93,6 +93,15 @@ const Sidebar = props => {
                   Restaurant Menu <i class="far fa-calendar-minus" />
                 </a>
               </li>
+              <li
+                data-toggle="tooltip"
+                data-placement="bottom"
+                title="Under Construction"
+              >
+                <a target="_blank" rel="noopener noreferrer">
+                  Mock Realty <i class="fas fa-home" />
+                </a>
+              </li>
               {/* <li
                 data-toggle="tooltip"
                 data-placement="bottom"
