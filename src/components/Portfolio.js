@@ -360,59 +360,44 @@ class Portfolio extends React.Component {
           style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}
           className="col-12 fadeInRightSecond"
         >
-          <div
-            className="img-responsive col-lg-6 col-sm-12 "
-            style={{ marginTop: "2%" }}
-          >
+          <div className="  col-lg-6 col-sm-12 " style={{ marginTop: "2%" }}>
             <img
               alt={" of menu app"}
-              style={{ height: "300px", overflow: "hidden" }}
+              // style={{ height: "300px", overflow: "hidden" }}
               src={rtr}
-              className="d-block w-100 img-responsive col-12  "
+              className="d-block w-100 img-fluid col-12  "
             />
           </div>
-          <div
-            className="img-responsive col-lg-6 col-sm-12 "
-            style={{ marginTop: "2%" }}
-          >
+          <div className="  col-lg-6 col-sm-12 " style={{ marginTop: "2%" }}>
             <img
               alt={" of menu app"}
-              style={{ height: "300px", overflow: "hidden" }}
+              // style={{ height: "300px", overflow: "hidden" }}
               src={rtr2}
-              className="d-block w-100 img-responsive col-12  "
+              className="d-block w-100 img-fluid col-12  "
             />
           </div>
-          <div
-            className="img-responsive col-lg-6 col-sm-12 "
-            style={{ marginTop: "2%" }}
-          >
+          <div className=" col-lg-6 col-sm-12 " style={{ marginTop: "2%" }}>
             <img
               alt={" of menu app"}
-              style={{ height: "300px", overflow: "hidden" }}
+              // style={{ height: "300px", overflow: "hidden" }}
               src={rtr3}
-              className="d-block w-100 img-responsive col-12  "
+              className="d-block w-100 img-fluid col-12  "
             />
           </div>
-          <div
-            className="img-responsive col-lg-6 col-sm-12 "
-            style={{ marginTop: "2%" }}
-          >
+          <div className="col-lg-6 col-sm-12 " style={{ marginTop: "2%" }}>
             <img
               alt={" of menu app"}
-              style={{ height: "300px", overflow: "hidden" }}
+              // style={{ height: "300px", overflow: "hidden" }}
               src={seqqure}
-              className="d-block w-100 img-responsive col-12  "
+              className="d-block w-100 img-fluid col-12  "
             />
           </div>
-          <div
-            className="img-responsive col-lg-6 col-sm-12 "
-            style={{ marginTop: "2%" }}
-          >
+          <div className="  col-lg-6 col-sm-12 " style={{ marginTop: "2%" }}>
             <img
               alt={" of menu app"}
-              style={{ height: "300px", overflow: "hidden" }}
+              // style={{ height: "300px", overflow: "hidden" }}
               src={seqqure2}
-              className="d-block w-100 img-responsive col-12  "
+              className="d-block w-100 img-fluid col-12  "
             />
           </div>
         </div>
