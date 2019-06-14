@@ -10,7 +10,7 @@ import seqqure from "./photos/seqqure.png";
 import seqqure2 from "./photos/seqqure2.png";
 import blog from "./photos/blog.png";
 import realty from "./photos/realty.png";
-
+import ReactModal from "react-modal";
 import allListings from "./photos/allListings.png";
 import higherLower2 from "./photos/higherLower2.png";
 import propDetails from "./photos/propDetails.png";
@@ -59,7 +59,9 @@ class Portfolio extends React.Component {
 
     selectedRepo: {},
     commits: true,
-    info: true
+    info: true,
+    showModal: false,
+    image: allListings
   };
   componentDidMount = () => {
     let promiseArr = Object.values(this.state).map(item => {
@@ -90,6 +92,10 @@ class Portfolio extends React.Component {
   setDisplay = e => {
     e.preventDefault();
     this.setState({ open: !this.state.open });
+  };
+
+  handleCloseModal = () => {
+    this.setState({ showModal: false });
   };
   changeRepo = repo => {
     const { weather, higherLower, menu, blog, realty } = this.state;
@@ -388,11 +394,9 @@ class Portfolio extends React.Component {
           className="col-12 fadeInRightSecond"
         >
           <div
+            onClick={() => this.setState({ showModal: true, image: rtr })}
             className="  col-lg-4 col-sm-12 "
             style={{ marginTop: "2%" }}
-            data-toggle="tooltip"
-            data-placement="bottom"
-            title="View reviews left for specific employee on RTR"
           >
             <img
               alt={" of menu app"}
@@ -402,10 +406,8 @@ class Portfolio extends React.Component {
           </div>
           <div
             className="  col-lg-4 col-sm-12 "
+            onClick={() => this.setState({ showModal: true, image: rtr2 })}
             style={{ marginTop: "2%" }}
-            data-toggle="tooltip"
-            data-placement="bottom"
-            title="Chart to track reviews left on different platforms (google, facebook, bbb) on rtr dash"
           >
             <img
               alt={" of menu app"}
@@ -415,10 +417,8 @@ class Portfolio extends React.Component {
           </div>
           <div
             className=" col-lg-4 col-sm-12 "
+            onClick={() => this.setState({ showModal: true, image: rtr3 })}
             style={{ marginTop: "2%" }}
-            data-toggle="tooltip"
-            data-placement="bottom"
-            title="Track review invites sent out by technician as well as sent from email/text"
           >
             <img
               alt={" of menu app"}
@@ -428,10 +428,8 @@ class Portfolio extends React.Component {
           </div>
           <div
             className="col-lg-4 col-sm-12 "
+            onClick={() => this.setState({ showModal: true, image: seqqure })}
             style={{ marginTop: "2%" }}
-            data-toggle="tooltip"
-            data-placement="bottom"
-            title="Constructed exceptions form on seqqure site, captured all failed requests ran through server"
           >
             <img
               alt={" of menu app"}
@@ -441,10 +439,8 @@ class Portfolio extends React.Component {
           </div>
           <div
             className="  col-lg-4 col-sm-12 "
+            onClick={() => this.setState({ showModal: true, image: seqqure2 })}
             style={{ marginTop: "2%" }}
-            data-toggle="tooltip"
-            data-placement="bottom"
-            title="Escrow page on seqqure that allowed filtering via mongodb aggregation methods"
           >
             <img
               alt={" of menu app"}
@@ -454,10 +450,10 @@ class Portfolio extends React.Component {
           </div>
           <div
             className="  col-lg-4 col-sm-12 "
+            onClick={() =>
+              this.setState({ showModal: true, image: higherLower2 })
+            }
             style={{ marginTop: "2%" }}
-            data-toggle="tooltip"
-            data-placement="bottom"
-            title="Higher lower game where user guesses whether next number will be higher or lower than hidden number"
           >
             <img
               alt={" of menu app"}
@@ -467,10 +463,10 @@ class Portfolio extends React.Component {
           </div>
           <div
             className="  col-lg-4 col-sm-12 "
+            onClick={() =>
+              this.setState({ showModal: true, image: propDetails })
+            }
             style={{ marginTop: "2%" }}
-            data-toggle="tooltip"
-            data-placement="bottom"
-            title="Additional information on home from Realty app"
           >
             <img
               alt={" of menu app"}
@@ -480,10 +476,23 @@ class Portfolio extends React.Component {
           </div>
           <div
             className="  col-lg-4 col-sm-12 "
+            onClick={() =>
+              this.setState({ showModal: true, image: allListings })
+            }
             style={{ marginTop: "2%" }}
-            data-toggle="tooltip"
-            data-placement="bottom"
-            title="Column/rows of realty properties utilizing Flexbox"
+          >
+            <img
+              alt={" of menu app"}
+              src={allListings}
+              className="d-block w-100 img-fluid col-12  "
+            />
+          </div>
+          <div
+            className="  col-lg-4 col-sm-12 "
+            onClick={() =>
+              this.setState({ showModal: true, image: realtyPhoto })
+            }
+            style={{ marginTop: "2%" }}
           >
             <img
               alt={" of menu app"}
@@ -493,10 +502,10 @@ class Portfolio extends React.Component {
           </div>
           <div
             className="  col-lg-4 col-sm-12 "
+            onClick={() =>
+              this.setState({ showModal: true, image: seqqureSearch })
+            }
             style={{ marginTop: "2%" }}
-            data-toggle="tooltip"
-            data-placement="bottom"
-            title="Escrow page from seqqure with search criteria entered"
           >
             <img
               alt={" of menu app"}
@@ -506,10 +515,10 @@ class Portfolio extends React.Component {
           </div>
           <div
             className="  col-lg-4 col-sm-12 "
+            onClick={() =>
+              this.setState({ showModal: true, image: realtyModal })
+            }
             style={{ marginTop: "2%" }}
-            data-toggle="tooltip"
-            data-placement="bottom"
-            title="Contact form from mock realty"
           >
             <img
               alt={" of menu app"}
@@ -518,6 +527,18 @@ class Portfolio extends React.Component {
             />
           </div>
         </div>
+        <ReactModal
+          isOpen={this.state.showModal}
+          contentLabel="Minimal Modal Example"
+        >
+          <button
+            className="btn btn-danger btn-sm"
+            onClick={this.handleCloseModal}
+          >
+            Close Modal
+          </button>
+          <img src={this.state.image} className="img-fluid" />
+        </ReactModal>
       </div>
     );
   }

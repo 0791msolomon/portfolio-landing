@@ -73,6 +73,7 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
     <!-- jQuery CDN - Slim version (=without AJAX) -->
+
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -92,16 +93,17 @@
     ></script>
     <script>
       $(function() {
+        $('[data-toggle="tooltip"]').tooltip({ trigger: "hover" });
+      });
+    </script>
+    <script>
+      $(function() {
         $("#sidebarCollapse").on("click", function() {
           $("#sidebar").toggleClass("active");
         });
       });
     </script>
-    <script>
-      $(function() {
-        $('[data-toggle="tooltip"]').tooltip({ trigger: "hover" });
-      });
-    </script>
+
     <script>
       $(".dropdown-toggle").dropdown();
     </script>
