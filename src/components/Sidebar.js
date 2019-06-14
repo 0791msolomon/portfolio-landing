@@ -96,9 +96,13 @@ const Sidebar = props => {
               <li
                 data-toggle="tooltip"
                 data-placement="bottom"
-                title="Under Construction"
+                title="Work in progress"
               >
-                <a target="_blank" rel="noopener noreferrer">
+                <a
+                  target="_blank"
+                  href="https://matthew-s-realty.herokuapp.com/"
+                  rel="noopener noreferrer"
+                >
                   Mock Realty <i class="fas fa-home" />
                 </a>
               </li>
