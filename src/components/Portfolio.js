@@ -10,6 +10,13 @@ import seqqure from "./photos/seqqure.png";
 import seqqure2 from "./photos/seqqure2.png";
 import blog from "./photos/blog.png";
 import realty from "./photos/realty.png";
+
+import allListings from "./photos/allListings.png";
+import higherLower2 from "./photos/higherLower2.png";
+import propDetails from "./photos/propDetails.png";
+import realtyPhoto from "./photos/realtyPhoto.png";
+import seqqureSearch from "./photos/seqqureSearch.png";
+import realtyModal from "./photos/realtyModal.png";
 import moment from "moment";
 import "../index.css";
 class Portfolio extends React.Component {
@@ -169,7 +176,11 @@ class Portfolio extends React.Component {
             <h3
               style={{ textAlign: "center", fontFamily: "open sans, roboto" }}
             >
-              Weather
+              {this.state.selectedRepo.name == "Weather Forecast" ? (
+                <u style={{ color: "#7386d5" }}>Weather</u>
+              ) : (
+                "Weather"
+              )}
             </h3>
             <img
               alt={" of weather app"}
@@ -187,7 +198,11 @@ class Portfolio extends React.Component {
             <h3
               style={{ textAlign: "center", fontFamily: "open sans, roboto" }}
             >
-              Blog
+              {this.state.selectedRepo.name == "Blog" ? (
+                <u style={{ color: "#7386d5" }}>Blog</u>
+              ) : (
+                "Blog"
+              )}
             </h3>
             <img
               alt={" Blog App"}
@@ -204,7 +219,11 @@ class Portfolio extends React.Component {
             <h3
               style={{ textAlign: "center", fontFamily: "open sans, roboto" }}
             >
-              Higher-Lower
+              {this.state.selectedRepo.name == "Higher-Lower" ? (
+                <u style={{ color: "#7386d5" }}>Higher-Lower</u>
+              ) : (
+                "Higher-Lower"
+              )}
             </h3>
             <img
               alt={" of higher-lower app"}
@@ -221,7 +240,11 @@ class Portfolio extends React.Component {
             <h3
               style={{ textAlign: "center", fontFamily: "open sans, roboto" }}
             >
-              Restaurant Menu
+              {this.state.selectedRepo.name == "Restaurant Menu" ? (
+                <u style={{ color: "#7386d5" }}>Menu</u>
+              ) : (
+                "Menu"
+              )}
             </h3>
             <img
               alt={" of menu app"}
@@ -238,7 +261,11 @@ class Portfolio extends React.Component {
             <h3
               style={{ textAlign: "center", fontFamily: "open sans, roboto" }}
             >
-              Realty
+              {this.state.selectedRepo.name == "Realty" ? (
+                <u style={{ color: "#7386d5" }}>Realty</u>
+              ) : (
+                "Realty"
+              )}
             </h3>
             <img
               alt={"realty app"}
@@ -348,11 +375,11 @@ class Portfolio extends React.Component {
             paddingBottom: "1%"
           }}
         >
-          <div className="container">
+          <div className="">
             <h4
               style={{ fontFamily: "open sans, roboto", textAlign: "center" }}
             >
-              Some images of interfaces i've done for seqqure/RTR
+              Some example Images from different projects
             </h4>
           </div>
         </div>
@@ -360,43 +387,133 @@ class Portfolio extends React.Component {
           style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}
           className="col-12 fadeInRightSecond"
         >
-          <div className="  col-lg-6 col-sm-12 " style={{ marginTop: "2%" }}>
+          <div
+            className="  col-lg-4 col-sm-12 "
+            style={{ marginTop: "2%" }}
+            data-toggle="tooltip"
+            data-placement="bottom"
+            title="View reviews left for specific employee on RTR"
+          >
             <img
               alt={" of menu app"}
-              // style={{ height: "300px", overflow: "hidden" }}
               src={rtr}
               className="d-block w-100 img-fluid col-12  "
             />
           </div>
-          <div className="  col-lg-6 col-sm-12 " style={{ marginTop: "2%" }}>
+          <div
+            className="  col-lg-4 col-sm-12 "
+            style={{ marginTop: "2%" }}
+            data-toggle="tooltip"
+            data-placement="bottom"
+            title="Chart to track reviews left on different platforms (google, facebook, bbb) on rtr dash"
+          >
             <img
               alt={" of menu app"}
-              // style={{ height: "300px", overflow: "hidden" }}
               src={rtr2}
               className="d-block w-100 img-fluid col-12  "
             />
           </div>
-          <div className=" col-lg-6 col-sm-12 " style={{ marginTop: "2%" }}>
+          <div
+            className=" col-lg-4 col-sm-12 "
+            style={{ marginTop: "2%" }}
+            data-toggle="tooltip"
+            data-placement="bottom"
+            title="Track review invites sent out by technician as well as sent from email/text"
+          >
             <img
               alt={" of menu app"}
-              // style={{ height: "300px", overflow: "hidden" }}
               src={rtr3}
               className="d-block w-100 img-fluid col-12  "
             />
           </div>
-          <div className="col-lg-6 col-sm-12 " style={{ marginTop: "2%" }}>
+          <div
+            className="col-lg-4 col-sm-12 "
+            style={{ marginTop: "2%" }}
+            data-toggle="tooltip"
+            data-placement="bottom"
+            title="Constructed exceptions form on seqqure site, captured all failed requests ran through server"
+          >
             <img
               alt={" of menu app"}
-              // style={{ height: "300px", overflow: "hidden" }}
               src={seqqure}
               className="d-block w-100 img-fluid col-12  "
             />
           </div>
-          <div className="  col-lg-6 col-sm-12 " style={{ marginTop: "2%" }}>
+          <div
+            className="  col-lg-4 col-sm-12 "
+            style={{ marginTop: "2%" }}
+            data-toggle="tooltip"
+            data-placement="bottom"
+            title="Escrow page on seqqure that allowed filtering via mongodb aggregation methods"
+          >
             <img
               alt={" of menu app"}
-              // style={{ height: "300px", overflow: "hidden" }}
               src={seqqure2}
+              className="d-block w-100 img-fluid col-12  "
+            />
+          </div>
+          <div
+            className="  col-lg-4 col-sm-12 "
+            style={{ marginTop: "2%" }}
+            data-toggle="tooltip"
+            data-placement="bottom"
+            title="Higher lower game where user guesses whether next number will be higher or lower than hidden number"
+          >
+            <img
+              alt={" of menu app"}
+              src={higherLower2}
+              className="d-block w-100 img-fluid col-12  "
+            />
+          </div>
+          <div
+            className="  col-lg-4 col-sm-12 "
+            style={{ marginTop: "2%" }}
+            data-toggle="tooltip"
+            data-placement="bottom"
+            title="Additional information on home from Realty app"
+          >
+            <img
+              alt={" of menu app"}
+              src={propDetails}
+              className="d-block w-100 img-fluid col-12  "
+            />
+          </div>
+          <div
+            className="  col-lg-4 col-sm-12 "
+            style={{ marginTop: "2%" }}
+            data-toggle="tooltip"
+            data-placement="bottom"
+            title="Column/rows of realty properties utilizing Flexbox"
+          >
+            <img
+              alt={" of menu app"}
+              src={realtyPhoto}
+              className="d-block w-100 img-fluid col-12  "
+            />
+          </div>
+          <div
+            className="  col-lg-4 col-sm-12 "
+            style={{ marginTop: "2%" }}
+            data-toggle="tooltip"
+            data-placement="bottom"
+            title="Escrow page from seqqure with search criteria entered"
+          >
+            <img
+              alt={" of menu app"}
+              src={seqqureSearch}
+              className="d-block w-100 img-fluid col-12  "
+            />
+          </div>
+          <div
+            className="  col-lg-4 col-sm-12 "
+            style={{ marginTop: "2%" }}
+            data-toggle="tooltip"
+            data-placement="bottom"
+            title="Contact form from mock realty"
+          >
+            <img
+              alt={" of menu app"}
+              src={realtyModal}
               className="d-block w-100 img-fluid col-12  "
             />
           </div>
