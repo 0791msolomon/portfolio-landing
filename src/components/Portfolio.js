@@ -79,6 +79,7 @@ class Portfolio extends React.Component {
           .then(res => {
             let updatedItem = item;
             updatedItem.commits = res.data;
+            console.log("data", res.data);
             this.setState({
               [item.replacementName]: updatedItem
             });
@@ -182,7 +183,7 @@ class Portfolio extends React.Component {
             <h3
               style={{ textAlign: "center", fontFamily: "open sans, roboto" }}
             >
-              {this.state.selectedRepo.name == "Weather Forecast" ? (
+              {this.state.selectedRepo.name === "Weather Forecast" ? (
                 <u style={{ color: "#7386d5" }}>Weather</u>
               ) : (
                 "Weather"
@@ -204,7 +205,7 @@ class Portfolio extends React.Component {
             <h3
               style={{ textAlign: "center", fontFamily: "open sans, roboto" }}
             >
-              {this.state.selectedRepo.name == "Blog" ? (
+              {this.state.selectedRepo.name === "Blog" ? (
                 <u style={{ color: "#7386d5" }}>Blog</u>
               ) : (
                 "Blog"
@@ -225,7 +226,7 @@ class Portfolio extends React.Component {
             <h3
               style={{ textAlign: "center", fontFamily: "open sans, roboto" }}
             >
-              {this.state.selectedRepo.name == "Higher-Lower" ? (
+              {this.state.selectedRepo.name === "Higher-Lower" ? (
                 <u style={{ color: "#7386d5" }}>Higher-Lower</u>
               ) : (
                 "Higher-Lower"
@@ -246,7 +247,7 @@ class Portfolio extends React.Component {
             <h3
               style={{ textAlign: "center", fontFamily: "open sans, roboto" }}
             >
-              {this.state.selectedRepo.name == "Restaurant Menu" ? (
+              {this.state.selectedRepo.name === "Restaurant Menu" ? (
                 <u style={{ color: "#7386d5" }}>Menu</u>
               ) : (
                 "Menu"
@@ -267,7 +268,7 @@ class Portfolio extends React.Component {
             <h3
               style={{ textAlign: "center", fontFamily: "open sans, roboto" }}
             >
-              {this.state.selectedRepo.name == "Realty" ? (
+              {this.state.selectedRepo.name === "Realty" ? (
                 <u style={{ color: "#7386d5" }}>Realty</u>
               ) : (
                 "Realty"
