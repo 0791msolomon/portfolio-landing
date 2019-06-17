@@ -13,9 +13,9 @@ const Chart = props => {
         : (obj[moment(item).format("l")] = 1);
     });
     dateLabels = Object.keys(obj);
-    dateLabels.unshift(moment(new Date()).format("l"));
+    // dateLabels.unshift(moment(new Date()).format("l"));
     dateCounts = Object.values(obj);
-    dateCounts.unshift(0);
+    // dateCounts.unshift(0);
   }
 
   const data = {
@@ -43,7 +43,17 @@ const Chart = props => {
     <Bar
       data={data}
       options={{
-        maintainAspectRatio: false
+        maintainAspectRatio: false,
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true,
+                min: 0
+              }
+            }
+          ]
+        }
       }}
     />
   );
