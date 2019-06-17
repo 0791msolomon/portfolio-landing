@@ -18,7 +18,10 @@ import realtyPhoto from "./photos/realtyPhoto.png";
 import seqqureSearch from "./photos/seqqureSearch.png";
 import realtyModal from "./photos/realtyModal.png";
 import moment from "moment";
+import Chart from "./Chart";
 import "../index.css";
+const dotenv = require("dotenv");
+dotenv.config();
 class Portfolio extends React.Component {
   state = {
     weather: {
@@ -77,18 +80,25 @@ class Portfolio extends React.Component {
             }&client_secret=${process.env.REACT_APP_CLIENT_SECRET}`
           )
           .then(res => {
+            let arr = [];
             let updatedItem = item;
             updatedItem.commits = res.data;
-            console.log("data", res.data);
+            updatedItem.commits.map(item => {
+              arr.push(item.commit.author.date);
+            });
+            updatedItem.commitTimes = arr;
+
             this.setState({
               [item.replacementName]: updatedItem
             });
           });
       }
     });
-    Promise.all(promiseArr).then(() =>
-      this.setState({ selectedRepo: this.state.weather })
-    );
+    Promise.all(promiseArr)
+      .then(() => this.setState({ selectedRepo: this.state.weather }))
+      .catch(err => {
+        console.log(err);
+      });
   };
   setDisplay = e => {
     e.preventDefault();
@@ -282,7 +292,21 @@ class Portfolio extends React.Component {
               className="d-block w-100 img-responsive col-12 repoCard "
             />
           </div>
+          <div
+            className="col-lg-8 col-sm-12"
+            style={{
+              minHeight: "250px",
+              alignSelf: "center",
+              marginTop: "5%"
+            }}
+          >
+            <Chart
+              times={this.state.selectedRepo.commitTimes}
+              name={this.state.selectedRepo.repo}
+            />
+          </div>
         </div>
+
         <div className="container col-12" style={{ marginTop: "3%" }}>
           <div
             className="col-12"
@@ -535,9 +559,11 @@ class Portfolio extends React.Component {
           <button
             className="btn btn-danger btn-sm"
             onClick={this.handleCloseModal}
+            style={{ marginBottom: "3%" }}
           >
             Close Modal
           </button>
+
           <img src={this.state.image} className="img-fluid" />
         </ReactModal>
       </div>

@@ -31,6 +31,11 @@ const Sidebar = props => {
             </Link>
           </li>
           <li>
+            <Link to="/demo">
+              Activity <i class="fas fa-chart-line" />
+            </Link>
+          </li>
+          <li>
             <a
               rel="noopener noreferrer"
               href="#pageSubmenu"
@@ -115,11 +120,7 @@ const Sidebar = props => {
               </li> */}
             </ul>
           </li>
-          <li>
-            <Link to="/demo">
-              Activity <i class="fas fa-chart-line" />
-            </Link>
-          </li>
+
           <li>
             <Link to="/contact">
               Contact <i class="far fa-comment-alt" />
