@@ -6,6 +6,7 @@ import Sidebar from "./components/Sidebar";
 import SidebarToggle from "./components/SidebarToggle";
 import Footer from "./components/Footer";
 function App() {
+  console.log("this will be redone utilizing hooks");
   return (
     <div
       style={{
