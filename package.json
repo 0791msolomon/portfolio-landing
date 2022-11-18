@@ -16,7 +16,7 @@
     "react-modal": "^3.8.1",
     "react-motion": "^0.5.2",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "3.0.0",
+    "react-scripts": "5.0.1",
     "react-toastify": "^5.1.1",
     "validator": "^10.11.0"
   },
